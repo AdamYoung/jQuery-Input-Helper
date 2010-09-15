@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQuery Input Helper | HTML - CSS - JAVASCRIPT</title>
+<link rel="stylesheet" href="css/site.css" type="text/css" media="screen" />
+</head>
+<body>
+
+<div id="wrapper"><div id="main">
+  <div id="header">
+    <h1>jQuery Input Helper</h1>
+  </div>
+ <div id="contentWrapper"> 
+   <div id="center">
+
+
+<p>
+The input helper is used to set a default value to an input when there is no user entered value in it. The default value is styled differently and will dissapear when the input gets focus.<br/>
+The <code>alt</code> attribute on <code>&lt;input></code> element is used to set the default value.<br/>
+All that is needed is to include the scripts and set the styling for the input when displying the help.
+</p>
+<p class="codeBlock">
+ <code>
+  &lt;script type="text/javascript" src="js/jquery-1.4.2.min.js">&lt;/script>
+  &lt;script type="text/javascript" src="js/jquery.inputHelper.js">&lt;/script>
+  &lt;style>
+   .inputHelp{ color: #666; font-style:italic; }
+  &lt;/style>
+ </code>
+</p>
+     <div class="loginBox">
+       <form name="loginForm" action="" method="get">
+         <div id="loginMsg"></div>
+         <input class="inputBox" name="username" size="10" maxlength="25" value="" alt="enter username..." />
+         <input class="inputBox" name="password" size="10" maxlength="25" value="" alt="enter password..." />
+         <input type="submit" value="login"/>
+       </form>
+     </div>
+   </div>   
+ </div>
+ <div id="footer">
+
+ </div>
+</div></div>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery.inputHelper.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+   //Plugin Init
+   $("input").inputHelp();
+
+   //Check for form post and display message
+   if(typeof $.urlParam('username')!="undefined" && typeof $.urlParam('password') != "undefined"){
+    $("#loginMsg").html("You submitted the login form!<br/>username:" + $.urlParam('username') + "<br/>password:" + $.urlParam('password'));
+   }
+ });
+
+ 
+</script>
+
+</body>
+</html>

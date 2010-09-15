@@ -1,0 +1,90 @@
+/* Reset */
+html,body,div,span,iframe,form,h1,h2,h3,h4,h5,h6,p,a,img,table,tr,th,td,ul {margin:0;padding:0;border:0;outline:0;background:transparent;}
+/* Defaults */
+body {
+background-color: #FFFFFF;
+font-size: 100%;
+font-family:Arial,Helvetica,sans-serif;
+color: #888;
+}
+a,
+a:visited,
+a:active,
+a:hover ,
+a:link { color: #888; text-decoration:none;}
+a:hover {color: #000;}
+h1 {
+color: #000;
+font-size: 20px;
+font-weight:normal;
+text-transform:uppercase;
+padding:5px 15px;
+margin:0px }
+h2 {
+color: #000;
+font-size:16px;
+font-weight: normal;
+padding: 5px 10px;
+margin:0px;}
+h3 {
+color: #000;
+font-size:14px;
+font-weight: normal;
+padding: 3px 10px;
+margin:0px;}
+p{ margin:10px; }
+/* Layout */
+.clear { clear:both; display:block; }
+#wrapper{ 
+width: 600px;
+margin-bottom: 10px;
+margin-left: auto;
+margin-right: auto;
+}
+#main{ 
+width: 100%;
+}
+#header{
+padding: 0px;
+margin:  0px;
+width:   100%;
+vertical-align:bottom;
+clear:both;
+}
+#contentWrapper{
+border:1px solid #CCC;
+float:left;
+clear:both;
+}
+#left{
+float: left;
+width: 140px;
+padding: 0;
+margin: 10px 5px 0 5px;
+}
+#right{ 
+float: left;
+width: 140px;
+padding: 0;
+margin: 10px 5px 0 5px;
+}
+#center{
+float: left;	
+background-color: #ffffff;
+margin:0;
+padding:0;
+width:600px;
+}
+#footer{
+clear: both;
+margin: 0px;
+padding: 0px;
+text-align: right;
+}
+
+.inputBox{ width:130px; }
+p.codeBlock{ background-color: #eee; border:1px solid #ccc; margin: 15px;}
+#loginMsg{ margin: 25px; background-color:#CEE; color:red; }
+.loginBox{ border:2px solid #ccc; margin:50px; padding: 0 0 15px 0; text-align:center; }
+/** inputHelp Plugin Classes **/
+.inputHelp{ color: #666; font-style:italic; }
